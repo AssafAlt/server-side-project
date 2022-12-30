@@ -1,0 +1,22 @@
+<%- include('partials/expensesHeader') %>
+
+<div class="container">
+  <div class="jumbotron centered">
+    <i class="fas fa-key fa-6x"></i>
+    <h1 class="display-3">Expenses</h1>
+
+    <% expenses.forEach(function(expense){ %>
+
+    <div class="card" style="width: 18rem">
+      <div class="card-body">
+        <h5 class="card-title"><%=expense.description%></h5>
+        <h6 class="card-subtitle mb-2 text-muted"><%=expense.category%></h6>
+        <p class="card-text"><%=expense.date%></p>
+        <p class="card-text"><%=expense.price%></p>
+      </div>
+    </div>
+    <% }) %>
+  </div>
+</div>
+
+<%- include('partials/expensesFooter') %>
